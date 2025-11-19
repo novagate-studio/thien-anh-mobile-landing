@@ -43,8 +43,8 @@ export default function Header() {
           </nav>
 
           <div className='flex items-center gap-4 shrink-0'>
-            <Image src={DangKy} alt='Dang Ky' className='h-10 w-auto'/>
-            <Image src={TaiGame} alt='Tai Game' className='h-10 w-auto'/>
+            <Image src={DangKy} alt='Dang Ky' className='h-8 md:h-10 w-auto'/>
+            <Image src={TaiGame} alt='Tai Game' className='h-8 md:h-10 w-auto'/>
             {/* Mobile Menu Button */}
             <button
               className='xl:hidden text-[#d4c5a0] hover:text-white'

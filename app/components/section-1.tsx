@@ -1,4 +1,5 @@
 import Backdrop from '@/assets/backdrop.jpg'
+import BackdropMobile from '@/assets/home-f2-mb.jpg'
 import BgNew from '@/assets/bg-news.png'
 import Event1 from '@/assets/slide-1-landscape.png'
 import Event2 from '@/assets/slide-2-landscape.png'
@@ -44,8 +45,9 @@ const events = [
 ]
 export default function Section1() {
   return (
-    <section className='relative'>
-      <Image src={Backdrop} className='absolute inset-0 h-full w-full object-cover' alt='Backdrop' />
+    <section id='tin-tuc' className='relative'>
+      <Image src={Backdrop} className='absolute inset-0 hidden lg:block h-full w-full object-cover' alt='Backdrop' />
+      <Image src={BackdropMobile} className='absolute inset-0 lg:hidden h-full w-full object-cover' alt='Backdrop' />
       <div className='container relative mx-auto flex flex-col items-center p-3 md:p-0 md:pb-20'>
         <Image src={Title2} alt='Title' className='w-full max-w-2xl' />
         <h1 className='hidden'>Bố cáo Thiên Hạ</h1>
@@ -68,7 +70,7 @@ export default function Section1() {
                       {event.title}
                     </h3>
                     <p className='line-clamp-2 leading-tight'>{event.description}</p>
-                    <div className='absolute bottom-1 right-4 text-sm text-gray-600'>{event.date}</div>
+                    <div className='absolute bottom-1 right-4 md:right-6 text-sm text-gray-600'>{event.date}</div>
                   </div>
                 </div>
               ))}
