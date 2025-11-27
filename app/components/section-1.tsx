@@ -9,6 +9,7 @@ import Title2 from '@/assets/title-2.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import NewsCarousel from './news-carousel'
+import moment from 'moment'
 const events = [
   {
     id: 1,
@@ -43,7 +44,10 @@ const events = [
     date: '02/02/2026',
   },
 ]
-export default function Section1() {
+export default async function Section1() {
+  // fetch post information
+  const response = await fetch(`https://api.novagate.vn/api/v2/articles`).then((res) => res.json())
+  const articles = response.data || []
   return (
     <section id='tin-tuc' className='relative'>
       <Image src={Backdrop} className='absolute inset-0 hidden lg:block h-full w-full object-cover' alt='Backdrop' />
@@ -59,21 +63,43 @@ export default function Section1() {
               <Link href='/tin-tuc'>{`Xem Thêm >>`}</Link>
             </div>
             <div className='relative pb-2.5 text-black'>
-              {events.map((event) => (
-                <div
-                  key={event.id}
-                  className='flex relative items-start h-32 p-2 lg:px-4 gap-4 border-b border-zinc-600 last:border-0'>
-                  <Image src={event.image} alt={event.title} className='h-full w-auto shrink-0' />
-                  <div className=''>
-                    <h3 className='text-lg font-semibold leading-tight line-clamp-2'>
-                      <span className='text-red-700 mr-1 '>[ Sự kiện ]</span>
-                      {event.title}
-                    </h3>
-                    <p className='line-clamp-2 leading-tight'>{event.description}</p>
-                    <div className='absolute bottom-1 right-4 md:right-6 text-sm text-gray-600'>{event.date}</div>
-                  </div>
-                </div>
-              ))}
+              {articles
+                .slice(0, 4)
+                .map(
+                  (article: {
+                    id: number
+                    thumbnail: string
+                    title: string
+                    description: string
+                    date: string
+                    slug: string
+                    tags: string
+                    created_at: string
+                  }) => (
+                    <Link
+                      href={`/${article.slug}`}
+                      key={article.id}
+                      className='flex relative items-start h-32 p-2 lg:px-4 gap-4 border-b border-zinc-600 last:border-0'>
+                      <Image
+                        width={500}
+                        height={500}
+                        src={article.thumbnail}
+                        alt={article.title}
+                        className='h-full w-52 object-cover shrink-0'
+                      />
+                      <div className=''>
+                        <h3 className='text-lg font-semibold leading-tight line-clamp-2'>
+                          <span className='text-red-700 mr-1 uppercase'>[ {article.tags}]</span>
+                          {article.title}
+                        </h3>
+                        <p className='line-clamp-2 leading-tight'>{article.description}</p>
+                        <div className='absolute bottom-1 right-4 md:right-6 text-sm text-gray-600'>
+                          {moment(article.created_at).format('DD/MM/YYYY')}
+                        </div>
+                      </div>
+                    </Link>
+                  )
+                )}
             </div>
           </div>
         </div>
