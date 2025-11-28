@@ -21,7 +21,7 @@ export default function Header() {
     <header className='bg-[#26282d] border-b border-zinc-700 font-serif sticky top-0 z-50 w-screen'>
       <div className=''>
         <div className='px-3'>
-          <div className='flex items-center justify-between h-24 relative'>
+          <div className='flex items-center justify-between h-24 relative z-10'>
             {/* Logo */}
             <div className='shrink-0'>
               <Link href='/' className='relative flex items-start'>
@@ -41,7 +41,7 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className='flex items-center gap-4 shrink-0'>
+            <div className='flex relative items-center gap-4 shrink-0'>
               <Link href={'https://id.novagate.vn'} target='_blank'>
                 <Image src={DangKy} alt='Dang Ky' className='h-8 md:h-10 w-auto' />
               </Link>

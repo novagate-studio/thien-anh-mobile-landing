@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   )
 
   return {
-    title: post.title || '404 Not Found',
-    description: post.description || 'Bài viết không tồn tại',
+    title: post?.title || '404 Not Found',
+    description: post?.description || 'Bài viết không tồn tại',
   }
 }
 export default async function Page({ params }: Props) {
