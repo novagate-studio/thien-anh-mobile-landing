@@ -1,53 +1,23 @@
+'use client'
 import Backdrop from '@/assets/backdrop.jpg'
-import BackdropMobile from '@/assets/home-f2-mb.jpg'
 import BgNew from '@/assets/bg-news.png'
-import Event1 from '@/assets/slide-1-landscape.png'
-import Event2 from '@/assets/slide-2-landscape.png'
-import Event3 from '@/assets/slide-3-landscape.jpg'
-import Event4 from '@/assets/slide-4-landscape.jpg'
+import BackdropMobile from '@/assets/home-f2-mb.jpg'
 import Title2 from '@/assets/title-2.png'
+import moment from 'moment'
 import Image from 'next/image'
 import Link from 'next/link'
 import NewsCarousel from './news-carousel'
-import moment from 'moment'
-const events = [
-  {
-    id: 1,
-    image: Event1,
-    title: 'Sự kiện Vòng Quay May Mắn Tháng 11 | Kiếm Thiên Mobile 1',
-    description:
-      'Tham gia ngay Vòng Quay May Mắn Tháng 11 để không bỏ lỡ cơ hội nhận ngay những trang bị cực phẩm, gia tăng sức mạnh và chinh phục mọi thử thách tại Kiếm Thiên Mobile! 1 description',
-    date: '11/11/2025',
-  },
-  {
-    id: 2,
-    image: Event2,
-    title: 'Sự kiện Vòng Quay May Mắn Tháng 11 | Kiếm Thiên Mobile 2',
-    description:
-      'Tham gia ngay Vòng Quay May Mắn Tháng 11 để không bỏ lỡ cơ hội nhận ngay những trang bị cực phẩm, gia tăng sức mạnh và chinh phục mọi thử thách tại Kiếm Thiên Mobile! 2 description',
-    date: '12/12/2025',
-  },
-  {
-    id: 3,
-    image: Event3,
-    title: 'Sự kiện Vòng Quay May Mắn Tháng 11 | Kiếm Thiên Mobile 3',
-    description:
-      'Tham gia ngay Vòng Quay May Mắn Tháng 11 để không bỏ lỡ cơ hội nhận ngay những trang bị cực phẩm, gia tăng sức mạnh và chinh phục mọi thử thách tại Kiếm Thiên Mobile! 3 description',
-    date: '01/01/2026',
-  },
-  {
-    id: 4,
-    image: Event4,
-    title: 'Sự kiện Vòng Quay May Mắn Tháng 11 | Kiếm Thiên Mobile 4',
-    description:
-      'Tham gia ngay Vòng Quay May Mắn Tháng 11 để không bỏ lỡ cơ hội nhận ngay những trang bị cực phẩm, gia tăng sức mạnh và chinh phục mọi thử thách tại Kiếm Thiên Mobile! 4 description',
-    date: '02/02/2026',
-  },
-]
-export default async function Section1() {
-  // fetch post information
-  const response = await fetch(`https://api.novagate.vn/api/v2/articles`).then((res) => res.json())
-  const articles = response.data || []
+import { useEffect, useState } from 'react'
+export default function Section1() {
+  const [articles, setArticles] = useState<any[]>([])
+  const fetchPosts = async () => {
+    const res = await fetch('https://api.novagate.vn/api/v2/articles', { cache: 'no-store' })
+    const data = await res.json()
+    setArticles(data.data || [])
+  }
+  useEffect(() => {
+    fetchPosts()
+  }, [])
   return (
     <section id='tin-tuc' className='relative'>
       <Image src={Backdrop} className='absolute inset-0 hidden lg:block h-full w-full object-cover' alt='Backdrop' />
