@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Spectral } from 'next/font/google'
+import { Roboto, Spectral } from 'next/font/google'
 import './globals.css'
 
 const serifFont = Spectral({
@@ -9,7 +9,7 @@ const serifFont = Spectral({
   display: 'swap',
 })
 
-const sansFont = Geist({
+const sansFont = Roboto({
   subsets: ['latin'],
   weight: ['400', '700'],
   display: 'swap',

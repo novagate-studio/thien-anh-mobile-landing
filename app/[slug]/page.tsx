@@ -33,19 +33,19 @@ export default async function Page({ params }: Props) {
   return (
     <div>
       <Header />
-      <div className='relative w-full article'>
+      <div className='relative w-full article bg-[#e0d0bd]'>
         <Image
           src={ArticleBackground}
           alt='Article Background'
           className='w-full h-screen object-cover hidden lg:block'
         />
-        <div className='relative w-full max-w-4xl mx-auto lg:-mt-[40vh] p-3'>
+        <div className='relative w-full max-w-4xl mx-auto lg:-mt-[40vh] p-3 bg-white'>
           <Image
             src={ArticleContentBackground}
             alt='Article Content Background'
             className='w-full h-auto absolute hidden lg:block inset-x-0 top-0'
           />
-          <div className='relative px-4 py-2'>
+          <div className='relative px-4 py-2 min-h-screen '>
             <div className='text-black uppercase text-4xl font-bold text-center w-full'>{post?.tags}</div>
             <div className='mt-10'>
               <h1 className='font-bold text-center mb-6 text-red-500 border-b border-dashed border-red-500'>

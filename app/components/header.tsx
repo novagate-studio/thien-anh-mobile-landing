@@ -21,9 +21,9 @@ export default function Header() {
     <header className='bg-[#26282d] border-b border-zinc-700 font-serif sticky top-0 z-50 w-screen'>
       <div className=''>
         <div className='px-3'>
-          <div className='flex items-center justify-between h-24 relative z-10'>
+          <div className='flex items-center justify-between h-24 relative'>
             {/* Logo */}
-            <div className='shrink-0'>
+            <div className='shrink-0 relative z-10'>
               <Link href='/' className='relative flex items-start'>
                 <Image src={Logo} alt='Game Logo' className='object-contain h-20 w-auto' priority />
               </Link>
