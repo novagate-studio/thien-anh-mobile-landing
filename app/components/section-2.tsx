@@ -11,32 +11,32 @@ const items = [
   {
     title: 'Đồ hoạ',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN5.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
   {
     title: 'Cảnh vật',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN6.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
   {
     title: 'Thời tiết',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN5.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
   {
     title: 'Kỳ ngộ',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN5.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
   {
     title: 'Số phận',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN5.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
   {
     title: 'Dị dung',
     longTitle: 'Giang hồ đoàn viên',
-    video: '/assets/videos/KTVN5.mp4',
+    video: '/assets/videos/vid1.mp4',
   },
 ]
 export default function Section2() {
