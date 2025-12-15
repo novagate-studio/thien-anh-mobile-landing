@@ -9,7 +9,7 @@ import DangKy from '@/assets/dang_ky.png'
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   const menuItems = [
-    { label: 'TIN TỨC', href: '#tin-tuc' },
+    { label: 'TIN TỨC', href: '/tin-tuc' },
     { label: 'SỰ KIỆN', href: '#su-kien' },
     { label: 'HƯỚNG DẪN', href: '#huong-dan' },
     { label: 'MÔN PHÁI', href: '#mon-phai' },
