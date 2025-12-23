@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto, Spectral } from 'next/font/google'
 import './globals.css'
-
+import Background from '@/assets/background.png'
 const serifFont = Spectral({
   variable: '--font-spectral',
   subsets: ['latin'],
@@ -28,7 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${sansFont.className} ${serifFont.variable} antialiased bg-[#e0d3bf]`}>{children}</body>
+      <body
+        className={`${sansFont.className} ${serifFont.variable} antialiased bg-[#e0d3bf]`}
+        style={{
+          backgroundImage: `url(${Background.src})`,
+          backgroundSize: '100% auto',
+          backgroundRepeat: 'no-repeat',
+        }}>
+        {children}
+      </body>
     </html>
   )
 }

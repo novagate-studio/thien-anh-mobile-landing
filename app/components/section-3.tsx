@@ -134,9 +134,9 @@ export default function Section3() {
   const [active, setActive] = useState('kim_tl')
 
   return (
-    <section id="mon-phai" className='relative py-20 w-full'>
-      <Image src={Bg} className='absolute hidden lg:block inset-0 h-full w-full object-cover' alt='Backdrop' />
-      <Image src={BgMb} className='absolute lg:hidden inset-0 h-full w-full object-cover' alt='Backdrop' />
+    <section id='mon-phai' className='relative py-20 w-full'>
+      {/* <Image src={Bg} className='absolute hidden lg:block inset-0 h-full w-full object-cover' alt='Backdrop' />
+      <Image src={BgMb} className='absolute lg:hidden inset-0 h-full w-full object-cover' alt='Backdrop' /> */}
       <div className='container max-w-4xl w-full relative mx-auto flex flex-col items-center'>
         <Image src={Title} alt='Title' className='w-full max-w-2xl' />
         <div className='relative w-full mt-16 px-4 grid grid-cols-[12%_88%]'>

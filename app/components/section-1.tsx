@@ -40,8 +40,8 @@ export default function Section1() {
 
   return (
     <section id='tin-tuc' className='relative'>
-      <Image src={Backdrop} className='absolute inset-0 hidden lg:block h-full w-full object-cover' alt='Backdrop' />
-      <Image src={BackdropMobile} className='absolute inset-0 lg:hidden h-full w-full object-cover' alt='Backdrop' />
+      {/* <Image src={Backdrop} className='absolute inset-0 hidden lg:block h-full w-full object-cover' alt='Backdrop' />
+      <Image src={BackdropMobile} className='absolute inset-0 lg:hidden h-full w-full object-cover' alt='Backdrop' /> */}
       <div className='container relative mx-auto flex flex-col items-center p-3 md:p-0 md:pb-20'>
         <Image src={Title2} alt='Title' className='w-full max-w-2xl' />
         <h1 className='hidden'>Bố cáo Thiên Hạ</h1>

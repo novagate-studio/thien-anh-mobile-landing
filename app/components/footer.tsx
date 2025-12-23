@@ -3,7 +3,7 @@ import Backdrop from '@/assets/bottom-footer.jpg';
 export default function Footer() {
   return (
     <footer id='ho-tro' className='w-full font-serif relative text-black p-3'>
-      <Image src={Backdrop} className='absolute inset-0 h-full w-full object-cover' alt='Backdrop' />
+      {/* <Image src={Backdrop} className='absolute inset-0 h-full w-full object-cover' alt='Backdrop' /> */}
       <div className='relative w-full flex flex-col items-center text-center py-10'>
         <h1>CÔNG TY CỔ PHẦN NOVAGATE</h1>
         <h2>NOVAGATE STUDIO</h2>

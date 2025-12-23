@@ -43,8 +43,8 @@ export default function Section2() {
   const [active, setActive] = useState(0)
   return (
     <section id='huong-dan' className='relative py-20 w-full'>
-      <Image src={BgF3} className='absolute hidden lg:block inset-0 h-full w-full object-cover' alt='Backdrop' />
-      <Image src={BgF3Mb} className='absolute lg:hidden inset-0 h-full w-full object-cover' alt='Backdrop' />
+      {/* <Image src={BgF3} className='absolute hidden lg:block inset-0 h-full w-full object-cover' alt='Backdrop' />
+      <Image src={BgF3Mb} className='absolute lg:hidden inset-0 h-full w-full object-cover' alt='Backdrop' /> */}
       <div className='max-w-[1980px] w-full relative mx-auto flex flex-col items-center'>
         <Image src={Title3} alt='Title' className='w-full max-w-2xl' />
         <h1 className='hidden'>Giang hồ đặc sắc</h1>
