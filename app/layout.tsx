@@ -27,16 +27,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${sansFont.className} ${serifFont.variable} antialiased bg-[#e0d3bf]`}
-        style={{
-          backgroundImage: `url(${Background.src})`,
-          backgroundSize: '100% auto',
-          backgroundRepeat: 'no-repeat',
-        }}>
-        {children}
-      </body>
-    </html>
+    <div>Under maintenance</div>
+    // <html lang='en'>
+    //   <body
+    //     className={`${sansFont.className} ${serifFont.variable} antialiased bg-[#e0d3bf]`}
+    //     style={{
+    //       backgroundImage: `url(${Background.src})`,
+    //       backgroundSize: '100% auto',
+    //       backgroundRepeat: 'no-repeat',
+    //     }}>
+    //     {children}
+    //   </body>
+    // </html>
   )
 }
