@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    /<div>Under maintenance</div>
+    //<div>Under maintenance</div>
     <html lang='en'>
       <body
         className={`${sansFont.className} ${serifFont.variable} antialiased bg-[#e0d3bf]`}
